@@ -82,7 +82,7 @@ async def new_member_greeting(update: Update, context: ContextTypes.DEFAULT_TYPE
     for member in new_members:
         # Check if the bot itself was added to avoid greeting itself
         if member.id == context.bot.id:
-            # Bot was added to the group - greet and list commands
+            # Bot was added to the group - greet and list command
             await context.bot.send_message(chat_id=chat_id,
                                           text="Thanks for adding me! I'm BanesBot, ready to help.\n\n" + get_commands_list_message(),
                                           parse_mode='Markdown')
