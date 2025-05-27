@@ -1,3 +1,21 @@
+# Run this code for deployment on replit
+
+from flask import Flask, render_template
+from threading import Thread
+
+app = Flask(automatedbot.py)
+
+@app.route('/')
+def index():
+    return "Alive"
+
+def run():
+    app.run(host = '0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
 # This is a script to make bot auto respond to message and commands
 # follow the following rules before running the script:
 # 1 create the bot with bot father and get the bot token
